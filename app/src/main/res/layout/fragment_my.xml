@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modules.mine.fragment.MyFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/main_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/h_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/app_color_blue"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/h_head"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_user_pic" />
+
+            <TextView
+                android:id="@+id/h_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h_head"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="用户"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/information_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/main_background"
+                android:orientation="vertical">
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/stv_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ll_height"
+                    stv:sBottomDividerLineMarginLeft="@dimen/dp_40"
+                    stv:sLeftIconRes="@drawable/icon_personal_user"
+                    stv:sLeftTextString="用户名"
+                    stv:sRightIconRes="@drawable/icon_right"
+                    stv:sRightTextColor="@color/gray"
+                    />
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/stv_user_sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ll_height"
+                    stv:sLeftIconRes="@drawable/icon_personal_sign"
+                    stv:sLeftTextString="签名"
+                    stv:sRightIconRes="@drawable/icon_right"
+                    stv:sRightTextColor="@color/gray"
+                    stv:sRightTextString=""
+                    android:visibility="gone" />
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/stv_change_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ll_height"
+                    stv:sBottomDividerLineMarginLeft="@dimen/dp_40"
+                    stv:sLeftIconRes="@drawable/icon_personal_pwd"
+                    stv:sLeftTextString="更改密码"
+                    stv:sRightIconRes="@drawable/icon_right" />
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/stv_announcement"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ll_height"
+                    android:layout_marginTop="@dimen/dp_10"
+                    stv:sBottomDividerLineMarginLeft="@dimen/dp_40"
+                    stv:sLeftIconRes="@drawable/icon_personal_announcement"
+                    stv:sLeftTextString="通知"
+                    stv:sRightIconRes="@drawable/icon_right"
+                    android:visibility="gone" />
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/stv_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ll_height"
+                    android:layout_marginTop="@dimen/dp_10"
+                    stv:sLeftIconRes="@drawable/icon_personal_update"
+                    stv:sLeftTextString="关于"
+                    stv:sRightIconRes="@drawable/icon_right" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/stv_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/ll_height"
+                stv:sCenterTextColor="@color/red_primary"
+                stv:sCenterTextString="退出登录" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
